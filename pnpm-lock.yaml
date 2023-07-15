@@ -16,6 +16,18 @@ dependencies:
     version: 4.2.2(vue@3.3.4)
 
 devDependencies:
+  '@iconify-json/ant-design':
+    specifier: ^1.1.6
+    version: 1.1.6
+  '@iconify-json/entypo-social':
+    specifier: ^1.1.4
+    version: 1.1.4
+  '@iconify-json/fa':
+    specifier: ^1.1.4
+    version: 1.1.4
+  '@iconify-json/fa-brands':
+    specifier: ^1.1.4
+    version: 1.1.4
   '@rushstack/eslint-patch':
     specifier: ^1.2.0
     version: 1.2.0
@@ -394,6 +406,30 @@ packages:
 
   /@humanwhocodes/object-schema@1.2.1:
     resolution: {integrity: sha512-ZnQMnLV4e7hDlUvw8H+U8ASL02SS2Gn6+9Ac3wGGLIe7+je2AeAOxPY+izIPJDfFDb7eDjev0Us8MO1iFRN8hA==}
+    dev: true
+
+  /@iconify-json/ant-design@1.1.6:
+    resolution: {integrity: sha512-y2mW6DU/6y6cE0hDQBxNeF45hj9XoZADHOK9EG5jffh7mOiLcJHOcjQOT8qv1AP8kK9A9cvl2EzNr7n5Fahd/g==}
+    dependencies:
+      '@iconify/types': 2.0.0
+    dev: true
+
+  /@iconify-json/entypo-social@1.1.4:
+    resolution: {integrity: sha512-i/DMR+LDyqufjkEJRfJtTBdo8gEabFN0HzE+dTWMrm1ZHEuJNpLY0y86TdAsHKmpnW59OlGUzGJ/hH4Xg0CHuQ==}
+    dependencies:
+      '@iconify/types': 2.0.0
+    dev: true
+
+  /@iconify-json/fa-brands@1.1.4:
+    resolution: {integrity: sha512-JT9BgOFT17qgwctdjGbIKENcW2jEOzo22/SPTAT2T4ygQPtG4niBFnjkDZNcqk9JHSyc6sYvgb9NFKoJ8eGkHQ==}
+    dependencies:
+      '@iconify/types': 2.0.0
+    dev: true
+
+  /@iconify-json/fa@1.1.4:
+    resolution: {integrity: sha512-A7FAeKvR8BP8c2oFgryGLTBkH3FwiSwf3t9RpPkxA3eMyoO2sTpRQqj+BuxU+oxUzAP22Ylz7rEKB/U0QODrHA==}
+    dependencies:
+      '@iconify/types': 2.0.0
     dev: true
 
   /@iconify/types@2.0.0:

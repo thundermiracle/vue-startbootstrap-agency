@@ -18,6 +18,10 @@
     "vue-router": "^4.2.2"
   },
   "devDependencies": {
+    "@iconify-json/ant-design": "^1.1.6",
+    "@iconify-json/entypo-social": "^1.1.4",
+    "@iconify-json/fa": "^1.1.4",
+    "@iconify-json/fa-brands": "^1.1.4",
     "@rushstack/eslint-patch": "^1.2.0",
     "@tsconfig/node18": "^2.0.1",
     "@types/jsdom": "^21.1.1",
