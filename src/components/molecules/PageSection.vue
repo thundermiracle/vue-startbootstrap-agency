@@ -11,11 +11,12 @@ defineProps<{
 </script>
 
 <template>
-  <section :id="id" :class="'py-150px md:py-100px text-center md:px-0 px-12px' + className + bgGray ? 'bg-gray100' : ''">
+  <section :id="id"
+    :class="'py-150px md:py-100px text-center md:px-0 px-12px ' + (className || '') + (bgGray ? ' bg-gray100' : '')">
     <div class="container mx-auto">
-      <h2 v-if="title" class="case-upper text-40px mt-0 mb-15px text-center">{{ title }}</h2>
+      <h2 v-if="title" class="case-upper text-40px mt-0 mb-15px">{{ title }}</h2>
       <hr v-if="titleSeparator" class="my-4" />
-      <h3 v-if="subTitle" class="text-muted text-16px font-400 mb-75px mt-0 italic font-serif text-center">
+      <h3 v-if="subTitle" class="text-muted text-16px font-400 mb-75px mt-0 italic font-serif">
         {{ subTitle }}
       </h3>
       <div class="container mx-auto">
