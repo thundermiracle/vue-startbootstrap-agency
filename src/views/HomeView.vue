@@ -1,16 +1,20 @@
 <script setup lang="ts">
-import FacebookIcon from '@/components/atoms/FacebookIcon.vue';
-import GithubIcon from '@/components/atoms/GithubIcon.vue';
-import LinkedinIcon from '@/components/atoms/LinkedinIcon.vue';
-import MediumIcon from '@/components/atoms/MediumIcon.vue';
+import { ref } from 'vue';
+import TopSection from '@/components/organisms/TopSection.vue';
+import TopDataJSON from 'contents/en/topData.json';
+
+const topData = ref<{
+  header: string;
+  subheader: string;
+  imageSrc: string;
+  jumpToAnchor?: string;
+  jumpToAnchorText?: string;
+}>(TopDataJSON);
 </script>
 
 <template>
   <main>
-    <GithubIcon userName="thundermiracle" />
-    <FacebookIcon userName="thundermiracle" />
-    <LinkedinIcon userName="thundermiracle" />
-    <MediumIcon userName="thundermiracle" />
-    <TwitterIcon userName="thundermiracle" />
+    <TopSection :header="topData.header" :subheader="topData.subheader" :imageSrc="topData.imageSrc"
+      :jumpToAnchor="topData.jumpToAnchor" :jumpToAnchorText="topData.jumpToAnchorText" />
   </main>
 </template>
