@@ -19,7 +19,8 @@ defineProps<{
           {{ imageContent }}
         </h4>
         <div v-else class="hw-100% relative">
-          <img class="rounded-full" fill :src="imageSrc" :alt="imageAlt || header || subheader || ''" />
+          <img loading="lazy" decoding="async" class="rounded-full" fill :src="imageSrc"
+            :alt="imageAlt || header || subheader || ''" />
         </div>
       </div>
     </div>

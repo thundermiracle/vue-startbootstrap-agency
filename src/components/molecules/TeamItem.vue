@@ -24,7 +24,7 @@ defineProps<{
   <div class="flex flex-col text-center items-center max-w-440px px-4 mb-50px">
     <div class="hw-239px rounded-img-border">
       <div class="hw-225px relative">
-        <img fill class="rounded-full" :src="imageSrc" :alt="imageAlt || header" />
+        <img loading="lazy" decoding="async" fill class="rounded-full" :src="imageSrc" :alt="imageAlt || header" />
       </div>
     </div>
     <h4 class="mt-25px mb-0 transform-none">{{ header }}</h4>

@@ -5,6 +5,7 @@ import ServicesSection from '@/components/organisms/ServicesSection.vue';
 import PortfolioSection from '@/components/organisms/PortfolioSection.vue';
 import TimelineSection from '@/components/organisms/TimelineSection.vue';
 import TeamSection from '@/components/organisms/TeamSection.vue';
+import ClientsSection from '@/components/organisms/ClientsSection.vue';
 import ContactSection from '@/components/organisms/ContactSection.vue';
 
 import TopDataJSON from 'contents/en/topData.json';
@@ -12,6 +13,7 @@ import ServicesDataJson from 'contents/en/servicesData.json';
 import PortfolioDataJson from 'contents/en/portfolioData.json';
 import TimelineDataJson from 'contents/en/timelineData.json';
 import TeamDataJson from 'contents/en/teamData.json';
+import ClientsDataJson from 'contents/en/clientsData.json';
 import ContactDataJson from 'contents/en/contactData.json';
 
 import type { ComponentProps } from '@/utils/typings';
@@ -21,6 +23,7 @@ const serviceData = ref<ComponentProps<typeof ServicesSection>>(ServicesDataJson
 const portfolioData = ref<ComponentProps<typeof PortfolioSection>>(PortfolioDataJson);
 const timelineData = ref<ComponentProps<typeof TimelineSection>>(TimelineDataJson);
 const teamData = ref<ComponentProps<typeof TeamSection>>(TeamDataJson);
+const clientsData = ref<ComponentProps<typeof ClientsSection>>(ClientsDataJson);
 const contactData = ref<ComponentProps<typeof ContactSection>>(ContactDataJson);
 </script>
 
@@ -32,6 +35,7 @@ const contactData = ref<ComponentProps<typeof ContactSection>>(ContactDataJson);
     <PortfolioSection :title="portfolioData.title" :subTitle="portfolioData.subTitle" :data="portfolioData.data" />
     <TimelineSection :title="timelineData.title" :subTitle="timelineData.subTitle" :data="timelineData.data" />
     <TeamSection :title="teamData.title" :subTitle="teamData.subTitle" :footer="teamData.footer" :data="teamData.data" />
+    <ClientsSection :data="clientsData.data" />
     <ContactSection :title="contactData.title" :subTitle="contactData.subTitle" :telephone="contactData.telephone"
       :email="contactData.email" />
   </main>
