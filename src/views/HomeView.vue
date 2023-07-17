@@ -1,5 +1,4 @@
 <script setup lang="ts">
-import { ref } from 'vue';
 import TopSection from '@/components/organisms/TopSection.vue';
 import ServicesSection from '@/components/organisms/ServicesSection.vue';
 import PortfolioSection from '@/components/organisms/PortfolioSection.vue';
@@ -15,28 +14,16 @@ import TimelineDataJson from 'contents/en/timelineData.json';
 import TeamDataJson from 'contents/en/teamData.json';
 import ClientsDataJson from 'contents/en/clientsData.json';
 import ContactDataJson from 'contents/en/contactData.json';
-
-import type { ComponentProps } from '@/utils/typings';
-
-const topData = ref<ComponentProps<typeof TopSection>>(TopDataJSON);
-const serviceData = ref<ComponentProps<typeof ServicesSection>>(ServicesDataJson);
-const portfolioData = ref<ComponentProps<typeof PortfolioSection>>(PortfolioDataJson);
-const timelineData = ref<ComponentProps<typeof TimelineSection>>(TimelineDataJson);
-const teamData = ref<ComponentProps<typeof TeamSection>>(TeamDataJson);
-const clientsData = ref<ComponentProps<typeof ClientsSection>>(ClientsDataJson);
-const contactData = ref<ComponentProps<typeof ContactSection>>(ContactDataJson);
 </script>
 
 <template>
   <main>
-    <TopSection :header="topData.header" :subheader="topData.subheader" :imageSrc="topData.imageSrc"
-      :jumpToAnchor="topData.jumpToAnchor" :jumpToAnchorText="topData.jumpToAnchorText" />
-    <ServicesSection :title="serviceData.title" :subTitle="serviceData.subTitle" :data="serviceData.data" />
-    <PortfolioSection :title="portfolioData.title" :subTitle="portfolioData.subTitle" :data="portfolioData.data" />
-    <TimelineSection :title="timelineData.title" :subTitle="timelineData.subTitle" :data="timelineData.data" />
-    <TeamSection :title="teamData.title" :subTitle="teamData.subTitle" :footer="teamData.footer" :data="teamData.data" />
-    <ClientsSection :data="clientsData.data" />
-    <ContactSection :title="contactData.title" :subTitle="contactData.subTitle" :telephone="contactData.telephone"
-      :email="contactData.email" />
+    <TopSection :="TopDataJSON" />
+    <ServicesSection :="ServicesDataJson" />
+    <PortfolioSection :="PortfolioDataJson" />
+    <TimelineSection :="TimelineDataJson" />
+    <TeamSection :="TeamDataJson" />
+    <ClientsSection :="ClientsDataJson" />
+    <ContactSection :="ContactDataJson" />
   </main>
 </template>

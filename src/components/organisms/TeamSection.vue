@@ -15,7 +15,7 @@ defineProps<{
   <SectionBase id="team" :title="title" :subTitle="subTitle" :footer="footer" bgGray>
     <div class="flex justify-around flex-wrap">
       <!-- pass all props in item to TeamItem -->
-      <TeamItem v-for="item in data" :key="item.imageSrc" v-bind="item" />
+      <TeamItem v-for="item in data" :key="item.imageSrc" :="item" />
     </div>
   </SectionBase>
 </template>

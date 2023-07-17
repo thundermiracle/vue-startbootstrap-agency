@@ -12,7 +12,7 @@ defineProps<{
   <SectionBase id="clients">
     <div class="flex flex-row flex-wrap">
       <div v-for="item in data" class="my-3 md:basis-1/4 basis-1/2" :key="item.src">
-        <ClientItem v-bind="item" />
+        <ClientItem :="item" />
       </div>
     </div>
   </SectionBase>
