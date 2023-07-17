@@ -1,18 +1,12 @@
 <script setup lang="ts">
 import SectionBase from '@/components/molecules/SectionBase.vue';
 import TimelineItem from '@/components/molecules/TimelineItem.vue';
+import type { ComponentProps } from '@/utils/typings';
 
 defineProps<{
   title: string;
   subTitle: string;
-  data: {
-    imageContent?: string;
-    imageSrc?: string;
-    imageAlt?: string;
-    header?: string;
-    subheader?: string;
-    content?: string;
-  }[]
+  data: ComponentProps<typeof TimelineItem>[];
 }>()
 </script>
 

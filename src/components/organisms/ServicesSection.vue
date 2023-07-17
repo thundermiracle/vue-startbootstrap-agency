@@ -1,15 +1,12 @@
 <script setup lang="ts">
 import SectionBase from "@/components/molecules/SectionBase.vue";
 import ServiceItem from "@/components/molecules/ServiceItem.vue";
+import type { ComponentProps } from '@/utils/typings';
 
 defineProps<{
   title: string;
   subTitle: string;
-  data: {
-    iconClass: string;
-    header: string;
-    content: string;
-  }[];
+  data: ComponentProps<typeof ServiceItem>[];
 }>();
 </script>
 

@@ -1,24 +1,13 @@
 <script setup lang="ts">
 import SectionBase from '../molecules/SectionBase.vue';
 import TeamItem from '@/components/molecules/TeamItem.vue';
+import type { ComponentProps } from '@/utils/typings';
 
 defineProps<{
   title: string;
   subTitle: string;
   footer: string;
-  data: {
-    imageSrc: string;
-    imageAlt?: string;
-    header: string;
-    subheader: string;
-    social?: {
-      twitter?: string;
-      facebook?: string;
-      linkedin?: string;
-      github?: string;
-      medium?: string;
-    };
-  }[];
+  data: ComponentProps<typeof TeamItem>[];
 }>()
 </script>
 

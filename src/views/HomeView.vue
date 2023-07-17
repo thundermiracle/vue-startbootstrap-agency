@@ -12,69 +12,13 @@ import PortfolioDataJson from 'contents/en/portfolioData.json';
 import TimelineDataJson from 'contents/en/timelineData.json';
 import TeamDataJson from 'contents/en/teamData.json';
 
+import type { ComponentProps } from '@/utils/typings';
 
-const topData = ref<{
-  header: string;
-  subheader: string;
-  imageSrc: string;
-  jumpToAnchor?: string;
-  jumpToAnchorText?: string;
-}>(TopDataJSON);
-
-const serviceData = ref<{
-  title: string;
-  subTitle: string;
-  data: {
-    iconClass: string;
-    header: string;
-    content: string;
-  }[];
-}>(ServicesDataJson);
-
-const portfolioData = ref<{
-  title: string;
-  subTitle: string;
-  data: {
-    imageSrc: string;
-    header: string;
-    subheader: string;
-    content?: string;
-    imageSrcDetail?: string;
-    imageAltDetail?: string;
-    extraInfo?: string[];
-  }[];
-}>(PortfolioDataJson);
-
-const timelineData = ref<{
-  title: string;
-  subTitle: string;
-  data: {
-    imageContent?: string;
-    imageSrc?: string;
-    imageAlt?: string;
-    header?: string;
-    subheader?: string;
-    content?: string;
-  }[];
-}>(TimelineDataJson);
-
-const teamData = ref<{
-  title: string;
-  subTitle: string;
-  footer: string;
-  data: {
-    imageSrc: string;
-    header: string;
-    subheader: string;
-    social: {
-      twitter?: string;
-      facebook?: string;
-      linkedin?: string;
-      medium?: string;
-      github?: string;
-    };
-  }[];
-}>(TeamDataJson);
+const topData = ref<ComponentProps<typeof TopSection>>(TopDataJSON);
+const serviceData = ref<ComponentProps<typeof ServicesSection>>(ServicesDataJson);
+const portfolioData = ref<ComponentProps<typeof PortfolioSection>>(PortfolioDataJson);
+const timelineData = ref<ComponentProps<typeof TimelineSection>>(TimelineDataJson);
+const teamData = ref<ComponentProps<typeof TeamSection>>(TeamDataJson);
 </script>
 
 <template>

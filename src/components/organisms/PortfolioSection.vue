@@ -1,19 +1,14 @@
 <script setup lang="ts">
 import SectionBase from '@/components/molecules/SectionBase.vue';
 import PortfolioItem from '@/components/molecules/PortfolioItem.vue';
+import type { ComponentProps } from '@/utils/typings';
 
 defineProps<{
   title: string;
   subTitle: string;
-  data: {
-    imageSrc: string;
-    header: string;
-    subheader: string;
-    content?: string;
-    imageSrcDetail?: string;
-    imageAltDetail?: string;
+  data: (ComponentProps<typeof PortfolioItem> & {
     extraInfo?: string[];
-  }[]
+  })[];
 }>()
 </script>
 
