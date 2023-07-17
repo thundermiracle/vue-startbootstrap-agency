@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import PageSection from '@/components/molecules/PageSection.vue';
+import SectionBase from '@/components/molecules/SectionBase.vue';
 import PortfolioItem from '@/components/molecules/PortfolioItem.vue';
 
 defineProps<{
@@ -18,7 +18,7 @@ defineProps<{
 </script>
 
 <template>
-  <PageSection id="portfolio" :title="title" :sub-title="subTitle" :bg-gray=true>
+  <SectionBase id="portfolio" :title="title" :sub-title="subTitle" :bg-gray=true>
     <div class="flex justify-around flex-wrap">
       <PortfolioItem v-for="portfolio in data" :key="portfolio.header" :imageSrc="portfolio.imageSrc"
         :header="portfolio.header" :subheader="portfolio.subheader" :content="portfolio.content"
@@ -28,5 +28,5 @@ defineProps<{
         </ul>
       </PortfolioItem>
     </div>
-  </PageSection>
+  </SectionBase>
 </template>
