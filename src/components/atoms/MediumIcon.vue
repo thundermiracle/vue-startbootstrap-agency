@@ -8,6 +8,6 @@ defineProps<{
 </script>
 
 <template>
-  <SocialIconBase :href="'https://medium.com/' + userName" iconClass="i-ant-design-medium-circle-filled"
-    :a11y-name="'medium of ' + userName" />
+  <SocialIconBase :href="`https://medium.com/${userName}`" iconClass="i-ant-design-medium-circle-filled"
+    :a11y-name="`medium of ${userName}`" />
 </template>

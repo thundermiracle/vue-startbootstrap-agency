@@ -10,7 +10,7 @@ defineProps<{
 </script>
 
 <template>
-  <div :class="'relative bg-dark text-white text-center ' + (className || '')">
+  <div :class="`relative bg-dark text-white text-center ${className || ''}`">
     <div class="h-491px md:h-759px">
       <img class="object-cover h-100% w-100%" loading="lazy" decoding="async" :src="imageSrc" :alt="imageAlt || header" />
     </div>

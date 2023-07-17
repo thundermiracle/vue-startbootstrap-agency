@@ -25,7 +25,7 @@ defineProps<{
       </div>
     </div>
     <div
-      :class="'relative md:w-41% md:pl-20px md:pb-20px pl-100px pr-20px float-right text-left ' + (direction === 'right' ? '' : 'md:float-left md:text-right')">
+      :class="`relative md:w-41% md:pl-20px md:pb-20px pl-100px pr-20px float-right text-left ${direction === 'right' ? '' : 'md:float-left md:text-right'}`">
       <div class="mt-0">
         <h4 v-if="header">{{ header }}</h4>
         <h4 v-if="subheader">{{ subheader }}</h4>

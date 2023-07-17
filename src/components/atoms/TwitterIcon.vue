@@ -8,6 +8,6 @@ defineProps<{
 </script>
 
 <template>
-  <SocialIconBase :href="'https://twitter.com/' + userName" iconClass="i-ant-design-twitter-circle-filled"
-    :a11y-name="'twitter of ' + userName" />
+  <SocialIconBase :href="`https://twitter.com/${userName}`" iconClass="i-ant-design-twitter-circle-filled"
+    :a11y-name="`twitter of ${userName}`" />
 </template>

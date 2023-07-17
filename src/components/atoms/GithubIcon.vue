@@ -8,6 +8,6 @@ defineProps<{
 </script>
 
 <template>
-  <SocialIconBase :href="'https://github.com/' + userName" iconClass="i-ant-design-github-filled"
-    :a11y-name="'github of ' + userName" />
+  <SocialIconBase :href="`https://github.com/${userName}`" iconClass="i-ant-design-github-filled"
+    :a11y-name="`github of ${userName}`" />
 </template>

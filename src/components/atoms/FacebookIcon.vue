@@ -8,6 +8,6 @@ defineProps<{
 </script>
 
 <template>
-  <SocialIconBase :href="'https://facebook.com/' + userName" iconClass="i-entypo-social-facebook-with-circle"
-    :a11y-name="'facebook of ' + userName" />
+  <SocialIconBase :href="`https://facebook.com/${userName}`" iconClass="i-entypo-social-facebook-with-circle"
+    :a11y-name="`facebook of ${userName}`" />
 </template>
