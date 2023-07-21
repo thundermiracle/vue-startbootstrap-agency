@@ -39,6 +39,10 @@ onMounted(() => {
 onUnmounted(() => {
   window.removeEventListener('scroll', scrollListener);
 });
+
+const closeMenu = () => {
+  expanded.value = false;
+};
 </script>
 
 <template>
@@ -51,9 +55,9 @@ onUnmounted(() => {
         {{ menuText }}
         <div className="i-fa-bars" />
       </button>
-      <div class="collapse navbar-collapse" :class="`${expanded ? 'show' : ''}`">
+      <div class="collapse navbar-collapse animate-fade-in" :class="`${expanded ? 'show' : ''}`">
         <ul class="navbar-nav uppercase ms-auto">
-          <NavItem v-for="menu in menus" :key="menu.anchor" :to="menu.anchor">
+          <NavItem v-for="menu in menus" :key="menu.anchor" :to="menu.anchor" :onClick="closeMenu">
             {{ menu.text || menu.anchor }}
           </NavItem>
         </ul>
