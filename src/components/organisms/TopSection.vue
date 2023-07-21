@@ -14,8 +14,8 @@ defineProps<{
 <template>
   <ImageCard :imageSrc="imageSrc" :header="header" :subheader="subheader">
     <!-- render when extraInfoPart is true -->
-    <button v-if="jumpToAnchor && jumpToAnchorText" type="button" class="big-btn">
+    <a v-if="jumpToAnchor && jumpToAnchorText" type="button" class="big-btn decoration-none" :href="`#${jumpToAnchor}`">
       {{ jumpToAnchorText }}
-    </button>
+    </a>
   </ImageCard>
 </template>

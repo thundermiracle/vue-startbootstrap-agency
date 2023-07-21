@@ -1,4 +1,5 @@
 <script setup lang="ts">
+import NavbarSection from '@/components/organisms/NavbarSection.vue';
 import TopSection from '@/components/organisms/TopSection.vue';
 import ServicesSection from '@/components/organisms/ServicesSection.vue';
 import PortfolioSection from '@/components/organisms/PortfolioSection.vue';
@@ -8,6 +9,7 @@ import ClientsSection from '@/components/organisms/ClientsSection.vue';
 import ContactSection from '@/components/organisms/ContactSection.vue';
 import FooterSection from '@/components/organisms/FooterSection.vue';
 
+import NavbarDataJson from 'contents/en/navbarData.json';
 import TopDataJSON from 'contents/en/topData.json';
 import ServicesDataJson from 'contents/en/servicesData.json';
 import PortfolioDataJson from 'contents/en/portfolioData.json';
@@ -20,6 +22,7 @@ import FooterDataJson from 'contents/en/footerData.json';
 
 <template>
   <main>
+    <NavbarSection :="NavbarDataJson" />
     <TopSection :="TopDataJSON" />
     <ServicesSection :="ServicesDataJson" />
     <PortfolioSection :="PortfolioDataJson" />
