@@ -47,7 +47,7 @@ const closeMenu = () => {
 
 <template>
   <nav :class="`${navbarCss} ${navbarCssMd} ${shrink ? navbarShrink : ''}`">
-    <div class="container-fluid">
+    <div class="container-fluid md:px-56px">
       <a :class="`${brandCss} ${brandCssMd} ${shrink ? brandShrink : ''}`" :href="`#`">
         {{ brand }}
       </a>
@@ -57,7 +57,7 @@ const closeMenu = () => {
       </button>
       <div class="collapse navbar-collapse animate-fade-in" :class="`${expanded ? 'show' : ''}`">
         <ul class="navbar-nav uppercase ms-auto">
-          <NavItem v-for="menu in menus" :key="menu.anchor" :to="menu.anchor" :onClick="closeMenu">
+          <NavItem v-for="menu in menus" :key="menu.anchor" :to="menu.anchor" @click="closeMenu">
             {{ menu.text || menu.anchor }}
           </NavItem>
         </ul>
