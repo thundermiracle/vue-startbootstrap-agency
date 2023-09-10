@@ -12,7 +12,7 @@ defineProps<{
 
 <template>
   <SectionBase id="services" :title="title" :subTitle="subTitle">
-    <div className="flex justify-around flex-wrap">
+    <div class="flex justify-around flex-wrap">
       <ServiceItem v-for="({ iconClass, header, content }) in data" :key="iconClass"
         rootClass="md:basis-1/3 basis-1/1 max-w-440px px-4" :iconClass="iconClass" :header="header" :content="content" />
     </div>
